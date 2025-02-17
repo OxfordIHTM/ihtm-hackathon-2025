@@ -7,4 +7,3 @@ imd <- read_data(
 )
 
 data <- read.csv("data/imd.csv")
-  
