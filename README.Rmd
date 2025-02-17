@@ -1,0 +1,68 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Oxford International Health and Tropical Medicine Hackathon 2025 <img src="https://raw.githubusercontent.com/OxfordIHTM/open-reproducible-science/main/images/ihealth_base_pos.png" width="200px" align="right" />
+
+<!-- badges: start -->
+[![License for data](https://img.shields.io/badge/license (for data)-CC0-blue.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![License for code](https://img.shields.io/badge/license (for code)-GPL3.0-blue.svg)](https://opensource.org/licenses/gpl-3.0.html)
+<!-- badges: end -->
+
+This repository contains instructions, data and code for the [University
+of Oxford MSc in International Health and Tropical
+Medicine](https://www.ox.ac.uk/admissions/graduate/courses/msc-international-health-and-tropical-medicine) **Hackathon 2025**. The **Hackathon 2025** event is part of
+the [MSc course](https://www.ox.ac.uk/admissions/graduate/courses/msc-international-health-and-tropical-medicine)’s
+[lecture series on Open Science and Reproducible Research in
+R](https://oxford-ihtm.io/open-reproducible-science).
+
+## Motivation
+
+**Hackathon 2025** caps the students’ introduction to [Open Science and Reproducible Research in R](https://oxford-ihtm.io/open-reproducible-science) through a case study within which they are to serve as researchers/data scientists. This exercise aims to provide the students a platform from which to apply skills in working with data using R that they have been learning and practising for about the past 6 weeks while at the same time exposing them to a collaborative team environment.
+
+## Format
+
+**Hackathon 2025** is structured as a **problem-based learning** exercise, a format that the course students are already familiar with given similar approaches done for other lectures. Briefly, this PBL exercise presents the problem first rather than teaching relevant material and subsequently having students apply the knowledge to solve the problem. Whilst the previous lectures in the [Open Science and Reproducible Research in R](https://oxford-ihtm.io/open-reproducible-science) series have provided foundational skills in R, the PBL approach for this hackathon will challenge the students to further explore and learn the extensive functionalities R has to offer in order to appropriately solve the problem/s they have been given to solve. This PBL is group-orientated and simulates a collaborative research/data science working environment facilitated through the use of [git](https://git-scm.com/) and
+[GitHub](https://github.com).
+
+Through this approach, the students are expected to:
+
+1.  Examine and define the problem.
+
+2.  Explore what they already know about underlying issues related to it.
+
+3.  Determine what they need to learn and where they can acquire the information and tools necessary to solve the problem.
+
+4.  Evaluate possible ways to solve the problem.
+
+5.  Solve the problem.
+
+6.  Report on their findings.
+
+## The case
+
+The case study along with the hackathon rules are presented here - <https://oxford-ihtm.io/imd-case-study>.
+
+The students are expected to use this repository to work out the R code and scientific workflow required to achieve the various objectives stated in the case study.
+
+Some preset tasks/issues set by the hackathon leads can be found [here](https://github.com/OxfordIHTM/ihtm-hackathon-2025/issues). The hackathon leads have also created this [project tracker]().
+
+## License
+
+Unless otherwise specified, data used in this repository are licensed under a [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) license.
+
+All code in this repository are licensed under a [GNU General Public License 3 (GPL-3)](https://opensource.org/licenses/gpl-3.0.html) license.
+
+
+
+<br/>
+<br/>
