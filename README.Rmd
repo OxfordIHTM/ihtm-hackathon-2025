@@ -54,7 +54,7 @@ The case study along with the hackathon rules are presented here - <https://oxfo
 
 The students are expected to use this repository to work out the R code and scientific workflow required to achieve the various objectives stated in the case study.
 
-Some preset tasks/issues set by the hackathon leads can be found [here](https://github.com/OxfordIHTM/ihtm-hackathon-2025/issues). The hackathon leads have also created this [project tracker](https://github.com/orgs/OxfordIHTM/projects/57/views/1).
+Some preset tasks/issues set by the hackathon leads can be found [here](https://github.com/OxfordIHTM/ihtm-hackathon-2025/issues). The hackathon leads have also created this [project tracker](https://github.com/orgs/OxfordIHTM/projects/57/views/3).
 
 ## License
 

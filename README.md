@@ -76,7 +76,7 @@ stated in the case study.
 Some preset tasks/issues set by the hackathon leads can be found
 [here](https://github.com/OxfordIHTM/ihtm-hackathon-2025/issues). The
 hackathon leads have also created this [project
-tracker](https://github.com/orgs/OxfordIHTM/projects/57/views/1).
+tracker](https://github.com/orgs/OxfordIHTM/projects/57/views/3).
 
 ## License
 
