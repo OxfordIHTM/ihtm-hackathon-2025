@@ -1,8 +1,13 @@
-download.file("data.csv")
+# Index of Multiple Deprivation ------------------------------------------------
 
-imd <- read_data(
-  url = "https://assets.publishing.service.gov.uk/media/5dc407b440f0b6379a7acc8d/File_7_-_All_IoD2019_Scores__Ranks__Deciles_and_Population_Denominators_3.csv", 
-  destfile = "data/imd.csv"
-)
-data <- read.csv("data/imd.csv")
+# download and read data
 
+if (!"imd.csv" %in% list.files("data")) {
+  download.file (url = "https://assets.publishing.service.gov.uk/media/5dc407b440f0b6379a7acc8d/File_7_-_All_IoD2019_Scores__Ranks__Deciles_and_Population_Denominators_3.csv",
+                 destfile= "data/imd.csv"
+  )  
+} else {
+  message("File already downloaded!")
+}
+
+imd <- read.csv("data/imd.csv")
