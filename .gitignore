@@ -3,8 +3,11 @@
 .RData
 .Ruserdata
 
+*.Rproj
+
 .DS_Store
 
 README.html
 
-
+data/_MACOSX
+data/English IMD 2019
