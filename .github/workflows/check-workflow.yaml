@@ -30,14 +30,14 @@ jobs:
 
       - name: Check that required dataset is available
         run: |
-          testthat::test_that("imd.csv file exists",
+          testthat::test_that("imd.csv file exists", {
             testthat::expect_true(
               length(list.files(path = "data", pattern = "imd.csv")) == 1
             )
             testthat::expect_true(
               length(list.files(path = "data", pattern = "england_map.zip")) == 1
             )
-          )          
+          })          
         shell: Rscript {0}
       
       - name: Check that R file runs without errors
