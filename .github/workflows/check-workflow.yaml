@@ -1,0 +1,55 @@
+name: check exercise
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  check-exercise:
+    runs-on: ubuntu-latest
+    container: rocker/geospatial:4.4.2
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install R packages
+        run: |
+          install.packages(c("rmarkdown", "testthat"))
+        shell: Rscript {0}
+        
+      - name: Check that R file/s exist/s
+        run: |
+          testthat::test_that("R file exists",
+            testthat::expect_true(
+              length(list.files(pattern = "\\.R$|\\.r$")) > 0
+            )
+          )
+        shell: Rscript {0}
+
+      - name: Check that required dataset is available
+        run: |
+          testthat::test_that("imd.csv file exists",
+            testthat::expect_true(
+              length(list.files(path = "data", pattern = "imd.csv")) == 1
+            )
+            testthat::expect_true(
+              length(list.files(path = "data", pattern = "england_map.zip")) == 1
+            )
+          )          
+        shell: Rscript {0}
+      
+      - name: Check that R file runs without errors
+        run: |
+          source("imd.R")
+        shell: Rscript {0}
+
+      # - name: Check that Rmd file runs without errors
+      #   run: |
+      #     rmarkdown::render(
+      #       "reports/cyclones.Rmd",
+      #       output_dir = "outputs",
+      #       knit_root_dir = here::here()
+      #     )
+      #   shell: Rscript {0}
