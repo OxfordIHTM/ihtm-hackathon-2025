@@ -15,6 +15,7 @@ if (!"imd.csv" %in% list.files("data")) {
 }
 
 ### Read imd.csv dataset ----
+#imd <- read.csv("imd.csv")
 imd <- read.csv("data/imd.csv")
 
 
@@ -41,8 +42,11 @@ unzip(
 ### Read shapefile of England ----
 library(sf)
 
+# england <- st_read(
+#   dsn = "data/English IMD 2019/IMD_2019.shp",
+#   layer = "IMD_2019.shp"
+# )
 england <- st_read(
   dsn = "data/English IMD 2019",
   layer = "IMD_2019"
 )
-
