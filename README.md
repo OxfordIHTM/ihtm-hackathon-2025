@@ -9,6 +9,9 @@
 data](https://img.shields.io/badge/license%20\(for%20data\)-CC0-blue.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![License for
 code](https://img.shields.io/badge/license%20\(for%20code\)-GPL3.0-blue.svg)](https://opensource.org/licenses/gpl-3.0.html)
+[![check
+workflow](https://github.com/OxfordIHTM/ihtm-hackathon-2025/actions/workflows/check-workflow.yaml/badge.svg)](https://github.com/OxfordIHTM/ihtm-hackathon-2025/actions/workflows/check-workflow.yaml)
+[![CodeFactor](https://www.codefactor.io/repository/github/oxfordihtm/ihtm-hackathon-2025/badge)](https://www.codefactor.io/repository/github/oxfordihtm/ihtm-hackathon-2025)
 <!-- badges: end -->
 
 This repository contains instructions, data and code for the [University
