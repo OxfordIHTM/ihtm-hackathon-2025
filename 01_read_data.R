@@ -42,7 +42,8 @@ unzip(
 library(sf)
 
 england <- st_read(
-  dsn = "data/English IMD 2019/IMD_2019.shp",
-  layer = "data/English IMD 2019/IMD_2019.shp"
+  dsn = "data/English IMD 2019",
+  layer = "IMD_2019"
 )
+
 
