@@ -21,5 +21,5 @@ names(imd) <- c(
   "wide_barriers_subdomain_score", "wide_barriers_subdomain_rank", "wide_barriers_subdomain_decile",
   "indoors_subdomain_score", "indoors_subdomain_rank", "indoors_subdomain_decile",
   "outdoors_subdomain_score", "outdoors_subdomain_rank", "outdoors_subdomain_decile",
-  "pop_2015", "pop_0_15_2015", "pop_16_59_2015", "pop_60_over_2015", "pop_18_59_2015"  
+  "pop_2015", "pop_0_15_2015", "pop_16_59_2015", "pop_60_over_2015", "pop_18_59_2015"
 )
