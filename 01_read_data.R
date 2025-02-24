@@ -39,7 +39,6 @@ unzip(
 )
 
 ### Read shapefile of England ----
-library(sf)
 
 england <- st_read(
   dsn = "data/English IMD 2019",
