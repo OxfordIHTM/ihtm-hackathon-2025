@@ -1,3 +1,6 @@
+# Read shapefile of England ----
+library(sf)
+
 # Index of Multiple Deprivation ------------------------------------------------
 
 ## download and read data ----
