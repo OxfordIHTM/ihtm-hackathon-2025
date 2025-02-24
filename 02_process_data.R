@@ -4,7 +4,7 @@
 
 ### Tidy up and simplify variable names ----
 names(imd) <- c(
-  lsoa_code_2011, lsoa_name_2011, lad_code_2019, lad_name_2019, 
+  "lsoa_code_2011, lsoa_name_2011, lad_code_2019, lad_name_2019, 
   imd_score, imd_rank, imd_decile, 
   income_score, income_rank, income_decile,
   employment_score, employment_rank, employment_decile,
@@ -21,5 +21,5 @@ names(imd) <- c(
   wide_barriers_subdomain_score, wide_barriers_subdomain_rank, wide_barriers_subdomain_decile,
   indoors_subdomain_score, indoors_subdomain_rank, indoors_subdomain_decile,
   outdoors_subdomain_score, outdoors_subdomain_rank, outdoors_subdomain_decile,
-  pop_2015, pop_0_15_2015, pop_16_59_2015, pop_60_over_2015, pop_18_59_2015  
+  pop_2015, pop_0_15_2015, pop_16_59_2015, pop_60_over_2015, pop_18_59_2015"  
 )
