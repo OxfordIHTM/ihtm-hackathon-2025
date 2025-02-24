@@ -38,8 +38,6 @@ unzip(
   overwrite = TRUE, exdir = "data"
 )
 
-
-
 england <- st_read(
   dsn = "data/English IMD 2019",
   layer = "IMD_2019"
