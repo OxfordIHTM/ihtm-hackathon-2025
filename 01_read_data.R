@@ -38,11 +38,11 @@ unzip(
   overwrite = TRUE, exdir = "data"
 )
 
-### Read shapefile of England ----
-library(sf)
+
 
 england <- st_read(
   dsn = "data/English IMD 2019",
   layer = "IMD_2019"
 )
+
 
