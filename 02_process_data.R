@@ -15,7 +15,7 @@ names(imd) <- c(
   "environment_score", "environment_rank", "environment_decile",
   "income_children_score", "income_children_rank", "income_children_decile",
   "income_older_score", "income_older_rank", "income_older_decile",
- "children_subdomain_score", "children_subdomain_rank", "children_subdomain_decile",
+  "children_subdomain_score", "children_subdomain_rank", "children_subdomain_decile",
   "adult_subdomain_score", "adult_subdomain_rank", "adult_subdomain_decile",
   "geo_barriers_subdomain_score", "geo_barriers_subdomain_rank", "geo_barriers_subdomain_decile",
   "wide_barriers_subdomain_score", "wide_barriers_subdomain_rank", "wide_barriers_subdomain_decile",
