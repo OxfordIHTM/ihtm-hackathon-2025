@@ -13,12 +13,17 @@ source("02_process_data.R")
 imd
 
 colnames(imd)
-library(ggplot2)
 
-#Scatter plot
-ggplot(imd, aes(x = crime_score, y = income_children_score)) +
-  geom_point(size=3) +
-  labs(title = "Income children score vs. Crime score", 
-       x = "Crime score", 
-       y = "Income children Score",
-       color= "income_children_score")
+#Creating tables
+summary(imd $imd_decile)
+library(dplyr)
+
+#Filter for selected variables with values less than 3
+imd_filtered <- imd %>%
+  filter(employment_decile == 1,
+         income_decile == 1,
+         education_decile == 1) %>%
+  select(employment_decile, income_decile, education_decile)
+
+#Print the table
+print(imd_filtered)
