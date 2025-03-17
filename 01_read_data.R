@@ -45,4 +45,29 @@ england <- st_read(
   layer = "IMD_2019"
 )
 
+### Download zipfile of UK shapefiles for local authority level map ----
+if ("uk_la_map.zip" %in% list.files("data")) {
+  message(
+    "uk_la_map.zip found in data directory. File will not be re-downloaded."
+  )
+} else {
+  download.file(
+    url = "https://borders.ukdataservice.ac.uk/ukborders/easy_download/prebuilt/shape/infuse_dist_lyr_2011.zip",
+    destfile = "data/uk_la_map.zip", mode = "wb"
+  )
+}
+
+### Extract shapefile from zipfile ----
+unzip(
+  zipfile = "data/uk_la_map.zip",
+  overwrite = TRUE, exdir = "data/uk_la"
+)
+
+### Read shapefile of England ----
+england_la <- st_read(
+  dsn = "data/uk_la",
+  layer = "infuse_dist_lyr_2011"
+) |>
+  filter(grepl(pattern = "E", x = geo_code))
+
 

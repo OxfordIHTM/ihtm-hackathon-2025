@@ -6,7 +6,7 @@
 ### Plot map using sf ----
 plot(
   england["IMD_Decile"], 
-  pal = rev(c("#FFFFFF", RColorBrewer::brewer.pal(n = 9, name = "YlGnBu"))),
+  pal = rev(c("#FFFFFF", brewer.pal(n = 9, name = "YlGnBu"))),
   lty = 0, axes = TRUE, graticule = TRUE,
   main = "Distribution of the Index of Multiple Deprivation (IMD) 2019 by LSOA in England"
 )
@@ -103,7 +103,6 @@ merge(
 ) |>
   ggplot(aes(fill = prop_most_deprived)) +
   geom_sf(linetype = 0) +
-  #scale_fill_viridis_c(option = "rocket", direction = -1) +
   scale_fill_gradientn(name = NULL, colours = RColorBrewer::brewer.pal(n = 9, name = "YlGnBu")) +
   annotation_scale(location = "br", width_hint = 0.5, pad_y = unit(0.5, "in")) +
   annotation_north_arrow(

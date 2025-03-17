@@ -6,7 +6,7 @@ library(dplyr)
 library(ggplot2)
 library(ggspatial)
 library(oxthema)
-library()
+library(RColorBrewer)
 
 
 ## download and read data ----
