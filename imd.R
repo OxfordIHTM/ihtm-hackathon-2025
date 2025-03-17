@@ -1,4 +1,9 @@
 library(sf)
+library(ggplot2)
+library(dplyr)
+library(tmap)
+library(leaflet)
+library(readr)
 
 # Index of Multiple Deprivation ------------------------------------------------s
 
