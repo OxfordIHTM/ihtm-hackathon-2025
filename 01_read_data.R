@@ -35,7 +35,7 @@ if ("england_map.zip" %in% list.files("data")) {
 ### Extract shapefile from zipfile ----
 unzip(
   zipfile = "data/england_map.zip",
-  overwrite = TRUE, exdir = "data"
+  overwrite = FALSE, exdir = "data"
 )
 
 ### Read shapefile of England ----
