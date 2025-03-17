@@ -1,5 +1,5 @@
 library(sf)
-
+library(dplyr)
 # Index of Multiple Deprivation ------------------------------------------------
 
 ## Read shapefile of England ----
