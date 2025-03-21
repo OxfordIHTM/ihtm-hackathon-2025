@@ -4,14 +4,14 @@
 ## Map index of multiple deprviation as shown in page 6 ----
 
 ### Plot map using sf ----
-plot(
-  england["IMD_Decile"], 
-  pal = rev(c("#FFFFFF", brewer.pal(n = 9, name = "YlGnBu"))),
-  lty = 0, axes = TRUE, graticule = TRUE,
-  main = "Distribution of the Index of Multiple Deprivation (IMD) 2019 by LSOA in England"
-)
-
-title(sub = "1 is most deprived and 10 is least deprived")
+# plot(
+#   england["IMD_Decile"], 
+#   pal = rev(c("#FFFFFF", brewer.pal(n = 9, name = "YlGnBu"))),
+#   lty = 0, axes = TRUE, graticule = TRUE,
+#   main = "Distribution of the Index of Multiple Deprivation (IMD) 2019 by LSOA in England"
+# )
+# 
+# title(sub = "1 is most deprived and 10 is least deprived")
 
 ### Plot map using ggplot2 ----
 england |>
@@ -61,6 +61,37 @@ imd |>
     prop_lsoa = n / sum(n),
     cumsum_prop_lsoa = cumsum(prop_lsoa)
   )
+
+
+## Table of neighbourhoods by their decile of deprivation and by number of ----
+## domains on which they are also the most deprived decile
+
+
+imd |>
+  select(
+    imd_decile, income_decile, employment_decile, education_decile, 
+    health_decile, crime_decile, housing_decile, environment_decile
+  ) |>
+  mutate(
+    imd_decile = factor(imd_decile, levels = 1:10),
+    across(
+      .cols = income_decile:environment_decile,
+      .fns = \(x) ifelse(x == 1, 1, 0),
+      .names = "{.col}_most"
+    ),
+    n_domain = (income_decile_most + employment_decile_most + 
+                  education_decile_most + health_decile_most + crime_decile_most + 
+                  housing_decile_most + environment_decile_most) |>
+      factor(levels = 0:7)
+  ) |>
+  count(n_domain, imd_decile, .drop = FALSE) |>
+  arrange(imd_decile, desc(n_domain)) |>
+  group_by(imd_decile) |>
+  mutate(
+    prop_lsoa = n / sum(n),
+    cumsum_prop_lsoa = cumsum(prop_lsoa)
+  ) |>
+  ungroup()
 
 
 ## Rank of average rank ----
