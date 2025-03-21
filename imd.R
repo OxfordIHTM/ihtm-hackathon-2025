@@ -18,3 +18,5 @@ source("02_process_data.R")
 
 
 ## data visualisation ----
+source("03_exploratory_data_analysis.R")
+

@@ -102,8 +102,9 @@ merge(
   by.x = "lsoa11cd", by.y = "lsoa_code_2011"
 ) |>
   ggplot(aes(fill = prop_most_deprived)) +
-  geom_sf(linetype = 0) +
-  scale_fill_gradientn(name = NULL, colours = RColorBrewer::brewer.pal(n = 9, name = "YlGnBu")) +
+  geom_sf(linetype = 0) + 
+  scale_fill_viridis_c(direction = -1, option = "viridis") +
+  #scale_fill_gradientn(name = NULL, colours = RColorBrewer::brewer.pal(n = 9, name = "YlGnBu")) +
   annotation_scale(location = "br", width_hint = 0.5, pad_y = unit(0.5, "in")) +
   annotation_north_arrow(
     location = "tr", which_north = "true", 
