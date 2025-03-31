@@ -2,6 +2,10 @@
 
 ## Index of Multiple Deprivation dataset ----
 
+
+### Read shapefile package is required ----
+library(sf)
+
 ### Download IMD dataset if not already available locally ----
 if (!"imd.csv" %in% list.files("data")) {
   download.file (
